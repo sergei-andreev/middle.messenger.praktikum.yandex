@@ -1,0 +1,22 @@
+@import url(./_variables.scss);
+
+.sign {
+	display: flex;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+	
+
+	&__wrap {
+		width: 100%;
+		max-width: 300px;
+		padding: 40px 30px;
+
+		border-radius: 15px;
+		box-shadow: 0 0 5px #00000025;
+	}
+
+	&__title {
+		color: var(--text-dark);
+	}
+}
