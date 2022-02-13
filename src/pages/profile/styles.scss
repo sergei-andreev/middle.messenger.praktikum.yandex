@@ -1,1 +1,123 @@
 @import "src/styles/variables";
+
+.profile {
+  display: flex;
+  height: 100vh;
+
+  &__back-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    background-color: $color-light-primary;
+    color: $color-white;
+    text-decoration: none;
+    box-shadow: 0 0 8px $color-lighter-gray;
+  }
+
+  &__back-arrow {
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: $color-primary;
+    border-radius: 50%;
+  }
+
+  &__content {
+    margin: 0 auto;
+    max-width: 510px;
+    width: 100%;
+  }
+
+  &__photo-section {
+    margin: 60px 0;
+    text-align: center;
+  }
+
+  &__photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 0 auto 25px;
+    background: $color-light-primary url("/static/icons/picture.svg") no-repeat center;
+
+    &:hover {
+      background: $color-primary;
+
+      .profile__photo-input {
+        display: block;
+      }
+    }
+  }
+
+  &__photo-input {
+    margin-left: 25px;
+    color: transparent;
+    display: none;
+  }
+
+  &__fullname {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  &__info {
+    margin-bottom: 60px;
+  }
+
+  &__action {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &_primary {
+      color: $color-primary;
+    }
+
+    &_danger {
+      color: $color-danger;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+
+}
+
+.profile-info {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $color-lighter-gray;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+
+  &__label {
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  &__input {
+    font-size: 16px;
+    border: none;
+    outline: 1px solid $color-lighter-gray;
+    text-align: right;
+    background-color: transparent;
+
+    &:disabled {
+      color: $color-gray;
+      outline: none;
+    }
+  }
+}
