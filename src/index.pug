@@ -3,18 +3,22 @@ extends layouts/main.pug
 block vars
     - title = 'Index page'
 
+block head
+    link(rel='stylesheet' href='styles/index.scss')
+
 block content
-    h1 Pages:
-    ul
-        li
-            a.link(href='pages/sign/in/index.pug') Sign in
-        li
-            a.link(href='pages/sign/up/index.pug') Sign up
-        li
-            a.link(href='pages/error/404/index.pug') 404 page
-        li
-            a.link(href='pages/error/500/index.pug') 500 page
-        li
-            a.link(href='pages/chat/index.pug') Chat
-        li
-            a.link(href='pages/profile/index.pug') Profile
+    .router
+        h1.router__heading Pages
+        ul.router__list
+            li.router__item
+                a.router__link(href='pages/sign/in/index.pug') Sign in
+            li.router__item
+                a.router__link(href='pages/sign/up/index.pug') Sign up
+            li.router__item
+                a.router__link(href='pages/error/404/index.pug') 404 page
+            li.router__item
+                a.router__link(href='pages/error/500/index.pug') 500 page
+            li.router__item
+                a.router__link(href='pages/chat/index.pug') Chat
+            li.router__item
+                a.router__link(href='pages/profile/index.pug') Profile
