@@ -1,0 +1,27 @@
+extends ../../../layouts/main.pug
+
+block vars
+    - title = 'Sign Up'
+
+block head
+    link(rel='stylesheet' href='../styles.scss')
+
+block content
+    .sign
+        .sign__wrap
+            h1.sign__title Create Account
+
+            form.sign__form
+                input.input.sign__input(type='text' name='first_name' placeholder='first name')
+                input.input.sign__input(type='text' name='second_name' placeholder='second name')
+                input.input.sign__input(type='text' name='login' placeholder='login')
+                input.input.sign__input(type='email' name='email' placeholder='your@email.com')
+                input.input.sign__input(type='password' name='password' placeholder='password')
+                input.input.sign__input(type='phone' name='phone' placeholder='+88001234567')
+
+                .sign__action
+                    h2.sign-action__title Sign Up
+                    a.sign-action__button(href='../in/index.pug')
+
+            .sign__links
+                a.link(href='../in/index.pug') Sign in

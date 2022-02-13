@@ -1,10 +1,22 @@
-@import 'variables';
+@import "src/styles/variables";
 
 .sign {
   display: flex;
   height: 100vh;
   align-items: center;
   justify-content: center;
+
+  input {
+    font-size: 16px;
+    height: 24px;
+    border: none;
+    border-bottom: 1px solid $color-lighter-gray;
+    outline: none;
+
+    &:focus {
+      border-bottom-color: $color-light-primary;
+    }
+  }
 
   &__wrap {
     width: 100%;
@@ -50,11 +62,11 @@
   }
 
   &__button {
-    background: url("../static/icons/chevron-right.svg") $color-primary center center;
+    background: url("../../../static/icons/chevron-right.svg") $color-primary center center;
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    transition: background-color .2s;
+    transition: background-color 0.2s;
 
     &:hover {
       background-color: $color-light-primary;
