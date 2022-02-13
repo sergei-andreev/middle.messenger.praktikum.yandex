@@ -1,0 +1,12 @@
+extends ../../../layouts/main.pug
+
+block vars
+    - title = 'Page 500'
+
+block head
+    link(rel='stylesheet' href='../styles.scss')
+
+block content
+    div.error-page
+        h1.error-page__title 500
+        p.error-page__text Opps.. something went wrong

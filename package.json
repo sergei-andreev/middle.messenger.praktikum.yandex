@@ -1,0 +1,27 @@
+{
+  "name": "middle.messenger.praktikum.yandex",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "npm run clear && parcel src/*.pug --no-cache --open",
+    "build": "npm run clear && parcel build src/*.pug",
+    "start": "npm run build && node server.js",
+    "clear": "rm -rf dist/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergei-andreev/middle.messenger.praktikum.yandex.git"
+  },
+  "keywords": [],
+  "author": "Sergei Andreev",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-pug": "^2.1.1",
+    "@parcel/transformer-sass": "^2.1.1",
+    "parcel": "^2.1.1",
+    "prettier": "2.5.1"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}

@@ -1,0 +1,46 @@
+@import "src/styles/variables";
+
+.two-colons {
+  display: flex;
+}
+
+.side {
+  height: 100vh;
+  background-color: #fbfbfb;
+  max-width: 310px;
+  padding: 20px 10px;
+  border-right: 1px solid #eaeaea;
+  width: 100%;
+
+  &__profile-link {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: $color-darker-gray;
+    text-decoration: none;
+    text-align: right;
+    margin-bottom: 25px;
+  }
+
+  &__search {
+    width: 100%;
+    height: 32px;
+    background: #efefef;
+    border-radius: 5px;
+    border: none;
+    padding: 0 15px;
+  }
+}
+
+.chat {
+  flex-grow: 1;
+
+  &_empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: $color-darker-gray;
+  }
+}

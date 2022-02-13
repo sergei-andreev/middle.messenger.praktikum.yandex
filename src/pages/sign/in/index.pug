@@ -1,0 +1,24 @@
+extends ../../../layouts/main.pug
+
+block vars
+    - title = 'Sign In'
+
+block head
+    link(rel='stylesheet' href='../styles.scss')
+
+block content
+    .sign
+        .sign__wrap
+            h1.sign__title Welcome Back
+
+            form.sign__form
+                input.input.sign__input(type='text' name='login' placeholder='login')
+                input.input.sign__input(type='password' name='password' placeholder='password')
+
+                .sign__action
+                    h2.sign-action__title Sign In
+                    a.sign-action__button(href='../../chat/index.pug')
+
+            .sign__links
+                a.link(href='../up/index.pug') Sign up
+                a.link(href='#') Forgot Password

@@ -1,0 +1,19 @@
+extends ../../layouts/main.pug
+
+block vars
+    - title = 'Chat app'
+
+block head
+    link(rel='stylesheet' href='styles.scss')
+
+block content
+    div.two-colons
+        div.side
+            a.side__profile-link(href='../profile/index.pug') Profile >
+
+            input.side__search(placeholder='Поиск')
+
+            div.side__chats
+
+        div.chat.chat_empty
+            p Выберите чат чтобы отправить сообщение

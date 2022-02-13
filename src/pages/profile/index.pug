@@ -1,0 +1,46 @@
+extends ../../layouts/main.pug
+
+block vars
+    - title = 'Profile'
+
+block head
+    link(rel='stylesheet' href='styles.scss')
+
+block content
+    .profile
+        a.profile__back-link(href='../chat/index.pug')
+            .profile__back-arrow <
+
+        .profile__content
+            .profile__photo-section
+                .profile__photo
+                    input.profile__photo-input(type="file", name="avatar")
+                .profile__fullname Ivan Ivanov
+
+            .profile__info.profile-info
+                .profile-info__row
+                    .profile-info__label Email
+                    input.profile-info__input(name='email', disabled=true, value='pochta@yandex.ru')
+                .profile-info__row
+                    .profile-info__label Login
+                    input.profile-info__input(name='login', disabled=true, value='ivanivanov')
+                .profile-info__row
+                    .profile-info__label Name
+                    input.profile-info__input(name='first_name', disabled=true, value='Ivan')
+                .profile-info__row
+                    .profile-info__label Surname
+                    input.profile-info__input(name='second_name' , disabled=true, value='Ivanov')
+                .profile-info__row
+                    .profile-info__label Display name
+                    input.profile-info__input(name='display_name', disabled=true, value='Ivan')
+                .profile-info__row
+                    .profile-info__label Phone
+                    input.profile-info__input(name='phone', disabled=true, value='+79088724458')
+
+            .profile__actions
+                button.profile__action.profile__action_primary#change-info Change info
+                a.profile__action.profile__action_primary(href='#') Change password
+                a.profile__action.profile__action_danger(href='../sign/in/index.pug') Logout
+
+block scripts
+    script(src='index.js' type='module')
