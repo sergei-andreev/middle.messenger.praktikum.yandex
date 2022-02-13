@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "parcel src/*.pug --no-cache --open",
-    "build": "rm -rf dist/* && parcel build src/*.pug"
+    "dev": "npm run clear && parcel src/*.pug --no-cache --open",
+    "build": "npm run clear && parcel build src/*.pug",
+    "start": "npm run build && node server.js",
+    "clear": "rm -rf dist/*"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,8 @@
     "@parcel/transformer-sass": "^2.1.1",
     "parcel": "^2.1.1",
     "prettier": "2.5.1"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
   }
 }
